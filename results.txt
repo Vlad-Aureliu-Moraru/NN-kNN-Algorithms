@@ -1,7 +1,20 @@
 ┌ STATISTICA
-├ Timpul de executare al algoritmului pentru 80 persoane  : 1.2283s
-├ Timpul Aproximat De Executie Pentru Procesarea Unei Img : 0.02s
-├  Matricea De Antrenare Contine	 : 320 imagini
-├  Matricea De Test Contine		 : 80 imagini
-├ Rata de Recunoastere Pentru Acest Run (NN) : 95.00%
-└ Rata de Recunoastere Pentru Acest Run (kNN): 93.75%
+├ Timpul total de executare pentru 80 persoane: 11.5659s
+├ Timpul mediu per imagine: 0.1446s
+├  Matricea de antrenare conține: 320 imagini
+├  Matricea de test conține: 80 imagini
+├─────────── Rezultate NN ───────────
+│ Norma 1: 96.25%
+│ Norma 2: 95.00%
+│ Norma 3: 23.75%
+├─────────── Rezultate kNN ───────────
+│ Norma 1, k=3: 97.50%
+│ Norma 1, k=5: 96.25%
+│ Norma 1, k=7: 92.50%
+│ Norma 2, k=3: 93.75%
+│ Norma 2, k=5: 93.75%
+│ Norma 2, k=7: 92.50%
+│ Norma 3, k=3: 21.25%
+│ Norma 3, k=5: 23.75%
+│ Norma 3, k=7: 23.75%
+└─────────────────────────────────────
