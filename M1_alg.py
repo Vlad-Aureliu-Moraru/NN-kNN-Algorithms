@@ -34,7 +34,7 @@ def displayImages(poza_test,knn_result,nn_result):
     plt.tight_layout()
     plt.show()
 
-def constructTrainingMatrix(num_persons,num_img_per_person):
+def constructTrainingMatrix(num_persons = 40,num_img_per_person = 10,procentage_of_images_to_train = 8):
     coloane_A = []
     coloane_B = []
     labels_A = []  
@@ -52,7 +52,7 @@ def constructTrainingMatrix(num_persons,num_img_per_person):
             img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
             img = img.astype(np.float32)
             img_vector = img.reshape(num_pixels, 1)
-            if j<=8:
+            if j<=procentage_of_images_to_train:
                 coloane_A.append( img_vector[:, 0])
                 labels_A.append(i)
                 count+=1
@@ -70,8 +70,8 @@ def constructTrainingMatrix(num_persons,num_img_per_person):
 
 def NN(pozaTest,A,norma):
     start = time.time()
-    z = np.zeros(A[0].size)
-    for i in range (0,A[0].size):
+    z = np.zeros(A.shape[1])
+    for i in range (0,A.shape[1]):
         if(norma==2):            
             z[i] = np.linalg.norm(pozaTest - A[:, i], 2) 
         elif(norma==1):

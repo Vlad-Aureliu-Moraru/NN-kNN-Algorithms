@@ -1,5 +1,5 @@
-import algorithm_related as alg
-import fileResultsWriter as frw
+import M1_alg as alg
+import M1_statistics as frw
 import time 
 
 h, w = 112, 92
